@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-Color corPrimaria = Color.fromRGBO(127, 0, 255, 1);
-Color corTextPrimario = Color.fromRGBO(32, 32, 32, 1);
-Color corTextSecundario = Color.fromRGBO(204, 204, 204, 1);
-Color corTextTerceario = Color.fromRGBO(124, 124, 124, 1);
+Color cor1 = const Color(0xFF68A0B0);
+Color cor2 = const Color(0xFF57B7BB);
+Color cor3 = const Color(0xFF5BCEB6);
+Color cor4 = const Color(0xFF7FE1A2);
+Color cor5 = const Color(0xFFB7EF88);
+Color cor6 = const Color(0xFFF9F871);

@@ -1,3 +1,4 @@
+import 'package:barb/MConstants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
@@ -10,7 +11,7 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 final controller = new PageController();
-Color myColor = Colors.red;
+Color myColor = cor1;
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
@@ -29,7 +30,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Expanded LoginBody() {
     return Expanded(
       child: Container(
-        color: Colors.blue,
+        color: cor3,
         child: Column(
           children: [
             SizedBox(height: 20),

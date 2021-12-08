@@ -1,7 +1,5 @@
 import 'package:barb/welcome_screen.dart';
 import 'package:flutter/material.dart';
-import 'calendario.dart';
-import 'formulario.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,7 +36,7 @@ class FirstRoute extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Calendario()),
+              MaterialPageRoute(builder: (context) => SecondRoute()),
             );
           },
         ),
