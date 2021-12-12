@@ -1,4 +1,7 @@
-import 'package:barb/welcome_screen.dart';
+import 'package:barb/MConstants.dart';
+import 'package:barb/convo.dart';
+import 'package:barb/login.dart';
+import 'package:barb/posts.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,12 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.amber,
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: cor3,
       ),
-      home: WelcomeScreen(),
+      home: Convo(),
     );
   }
 }
