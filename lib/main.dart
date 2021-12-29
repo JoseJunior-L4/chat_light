@@ -1,15 +1,16 @@
 import 'package:barb/MConstants.dart';
-import 'package:barb/convo.dart';
-import 'package:barb/login.dart';
-import 'package:barb/posts.dart';
+import 'package:barb/screens/home_view.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,53 +21,25 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: cor3,
       ),
-      home: Convo(),
+      home: HomeScreen(),
     );
   }
 }
 
-class FirstRoute extends StatelessWidget {
-  const FirstRoute({Key? key}) : super(key: key);
+class ChatView extends StatefulWidget {
+  const ChatView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('First Route'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          child: Text('Open route'),
-          // Within the `FirstRoute` widget
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SecondRoute()),
-            );
-          },
-        ),
-      ),
-    );
-  }
+  _ChatViewState createState() => _ChatViewState();
 }
 
-class SecondRoute extends StatelessWidget {
-  const SecondRoute({Key? key}) : super(key: key);
-
+class _ChatViewState extends State<ChatView> {
   @override
   Widget build(BuildContext context) {
+    //FirebaseFirestore.instance.collection("users").doc().set({"name": "james"});
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Second Route"),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
+        appBar: AppBar(
+      title: Text("sadw"),
+    ));
   }
 }
